@@ -19,5 +19,9 @@ python3 -m http.server --cgi 8000
 ```
 3. On a web browser, run localhost port 8000.
 ```
+http://localhost:8000/
+```
+or
+```
 http://0.0.0.0:8000/
 ```
