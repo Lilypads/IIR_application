@@ -3,7 +3,17 @@ Using sensor to control a game.
 
 ## Prerequisite
 1. Python
+https://www.python.org/downloads/
 
+2. Pynput controller library
+
+```
+pip install pynput
+```
+or
+```
+pip3 install pynput
+```
 ## How to open the game in browser
 1. Use terminal to access the game directory(webGL format file).
 ```
