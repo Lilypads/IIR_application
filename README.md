@@ -3,10 +3,11 @@ Using sensor to control a game.
 
 ## Prerequisite
 1. Python
+Check the following webpage for instructions on how to install latest version of python:
 https://www.python.org/downloads/
 
 2. Pynput controller library
-
+On terminal, install pynput with pip or pip3. 
 ```
 pip install pynput
 ```
@@ -19,7 +20,7 @@ pip3 install pynput
 ```
 cd IIR_application/Dinosaur_trial1
 ```
-2. Use terminal to run http server at port 8000. Keep the terminal open. (Exit shortcut: ctrl+c)
+2. Use terminal to run http server at port 8000. Keep the terminal open (Exit shortcut: ctrl+c).
 ```
 python -m http.server --cgi 8000
 ```
