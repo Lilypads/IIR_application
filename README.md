@@ -60,6 +60,7 @@ or
 ```
 http://0.0.0.0:8000/
 ```
+For this demo game, shake accelerometer in z-axis to jump. Try to avoid the spikes.
 
 ### Notes
 You can use this controller on any other custom/pre-existing games. However, please make sure the key pressed in the controller(realtime_iir_main.py) is correspond to the game you want to play.
