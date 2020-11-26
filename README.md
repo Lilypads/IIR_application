@@ -3,10 +3,12 @@ Using sensor to control a game.
 
 ## Prerequisite
 1. Python
+
 Check the following webpage for instructions on how to install latest version of python:
 https://www.python.org/downloads/
 
 2. Pynput controller library
+
 On terminal, install pynput with pip or pip3. 
 ```
 pip install pynput
