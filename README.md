@@ -12,9 +12,9 @@ https://www.python.org/downloads/
 Check the following webpage for instructions on how to install pyFirmata2:
 https://pypi.org/project/pyFirmata2/
 
-3. pynput (Controller Library)
+3. pynput (Keyboard Controller Library)
 
-On terminal, install pynput with pip or pip3. 
+On a terminal, install pynput with pip or pip3. 
 ```
 pip install pynput
 ```
@@ -24,8 +24,8 @@ pip3 install pynput
 ```
 *Reference resource: https://pypi.org/project/pynput/*
 
-## How to run the Controller
-1. Change Directory to a clone of this project.
+## How to run the game controller
+1. Change Directory to a clone of this project in your local file system.
 ```
 cd IIR_application
 ```
@@ -37,6 +37,7 @@ or
 ```
 python3 realtime_iir_main.py
 ```
+There should be 2 plots showing up. One is the unfiltered data. The other one is the filtered data. Keep this terminal running when you play.
 
 ## How to open the Demo Dinosaur game in browser
 1. Use terminal to access the game directory(webGL format file).
