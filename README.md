@@ -1,5 +1,5 @@
 # IIR_application
-Using sensor to control a game.
+Using accelerometer sensor and arduino to control a game.
 
 ## Prerequisite
 1. Python
