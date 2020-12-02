@@ -1,10 +1,10 @@
-class IIR_filter_2ndOrder:
-    def __init__(self,b0,b1,b2,a1,a2):
-        self.b0 = b0
-        self.b1 = b1
-        self.b2 = b2
-        self.a1 = a1
-        self.a2 = a2
+class IIR2Filter:
+    def __init__(self,coefficients):    # need array of 6 elements input
+        self.b0 = coefficients[0]
+        self.b1 = coefficients[1]
+        self.b2 = coefficients[2]
+        self.a1 = coefficients[4]
+        self.a2 = coefficients[5]
         self.acc = 0;        # accumulator
         self.b_x1 = 0;       # input x delay buffer
         self.b_x2 = 0;
@@ -18,3 +18,13 @@ class IIR_filter_2ndOrder:
         self.b_y2 = self.b_y1
         self.b_y1 = self.acc
         return self.acc
+
+class IIRFilter:
+    def __init__(self,coefficients_array):
+        for i in range(len(coefficients_array)):
+            self.filters[i] = IIR2Filter(coefficients_array[i])  # instantiate 2nd order filters
+        
+    def dofilter(self,u):
+        for i in range(len(self.filter)):
+           u = self.filters[i].dofilter(u)
+        return u
