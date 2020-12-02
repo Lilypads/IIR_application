@@ -1,3 +1,5 @@
+
+
 class IIR2Filter:
     def __init__(self,coefficients):    # need array of 6 elements input
         self.b0 = coefficients[0]
@@ -21,10 +23,11 @@ class IIR2Filter:
 
 class IIRFilter:
     def __init__(self,coefficients_array):
+        self.filters = []
         for i in range(len(coefficients_array)):
-            self.filters[i] = IIR2Filter(coefficients_array[i])  # instantiate 2nd order filters
-        
+            self.filters.append(IIR2Filter(coefficients_array[i])) # instantiate 2nd order filters
+                   
     def dofilter(self,u):
-        for i in range(len(self.filter)):
+        for i in range(len(self.filters)):
            u = self.filters[i].dofilter(u)
         return u

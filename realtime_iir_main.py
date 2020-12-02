@@ -19,7 +19,7 @@ import scipy.signal as sig
 # Creates a scrolling data display
 class RealtimePlotWindow:
 
-    def __init__(self):
+    def __init__(self, ylim1,ylim2):
         # create a plot window
         self.fig, self.ax = plt.subplots()
         # that's our plotbuffer
@@ -27,7 +27,7 @@ class RealtimePlotWindow:
         # create an empty line
         self.line, = self.ax.plot(self.plotbuffer)
         # axis
-        self.ax.set_ylim(-0.05,0.05)
+        self.ax.set_ylim(ylim1,ylim2)
         # That's our ringbuffer which accumluates the samples
         # It's emptied every time when the plot window below
         # does a repaint
@@ -54,8 +54,8 @@ class RealtimePlotWindow:
 
 # Create an instance of an animated scrolling window
 # To plot more channels just create more instances and add callback handlers below
-realtimePlotWindow = RealtimePlotWindow()
-realtimePlotWindow2 = RealtimePlotWindow()
+realtimePlotWindow = RealtimePlotWindow(0.35,0.45)
+realtimePlotWindow2 = RealtimePlotWindow(-0.05,0.05)
 
 # sampling rate: 100Hz
 samplingRate = 100
@@ -108,7 +108,7 @@ def callBack(data):
         keyboard.release(Key.space)
         #print("SpaceJump")
         
-    realtimePlotWindow.addData(data)
+    realtimePlotWindow.addData(data,)
     realtimePlotWindow2.addData(output)
 
 # Get the Ardunio board.
