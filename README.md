@@ -27,6 +27,10 @@ pip3 install pynput
 ```
 *Reference resource: https://pypi.org/project/pynput/*
 
+4. Arduino board and accelerometer wired as in the __circuit_diagram__ image above
+
+*You might need to change PORT number in the __realtime_iir_main.py__ script to the corresponding Arduino port on your PC.*
+
 ## How to run the game controller
 1. Change Directory to a clone of this project in your local file system.
 ```
