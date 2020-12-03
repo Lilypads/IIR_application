@@ -1,3 +1,6 @@
+![Alt text](https://github.com/Lilypads/IIR_application/blob/master/circuit_diagram.png)
+![Alt text](https://github.com/Lilypads/IIR_application/blob/master/game_preview.png)
+
 # IIR_application
 Using accelerometer sensor and Arduino to control a game.
 
