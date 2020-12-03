@@ -1,5 +1,3 @@
-
-
 class IIR2Filter:
     def __init__(self,coefficients):    # need array of 6 elements input
         self.b0 = coefficients[0]
