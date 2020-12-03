@@ -54,7 +54,7 @@ class RealtimePlotWindow:
 
 # Create an instance of an animated scrolling window
 # To plot more channels just create more instances and add callback handlers below
-realtimePlotWindow = RealtimePlotWindow(0.35,0.45)
+realtimePlotWindow = RealtimePlotWindow(0.35,0.45)      #input custom plot ylim
 realtimePlotWindow2 = RealtimePlotWindow(-0.05,0.05)
 
 # sampling rate: 100Hz
@@ -72,15 +72,6 @@ sosLP = sig.cheby2(6,40,fc/samplingRate*2,btype='low',output='sos')
 filterDC = IIRFilter(sosDC)
 filterLP = IIRFilter(sosLP)
 
-# # instantiate the iir filter with coefficients
-# filterDC = IIR_filter_2ndOrder(0.78429785, -1.56859571, 0.78429785, -1.76995414, 0.78402168)
-# filterDC2 = IIR_filter_2ndOrder(1.        , -2.        , 1.        , -1.82269493, 0.83718165)
-# filterDC3 = IIR_filter_2ndOrder(1.        , -2.        , 1.        , -1.92188606, 0.93716115)
-
-# filterLP = IIR_filter_2ndOrder(1.11171764e-02, -1.77905018e-04, 1.11171764e-02, -1.23046251e+00, 3.91758991e-01)
-# filterLP2 = IIR_filter_2ndOrder(1.00000000e+00, -1.53404451e+00, 1.00000000e+00, -1.48743241e+00, 6.23734470e-01)
-# filterLP3 = IIR_filter_2ndOrder(1.00000000e+00, -1.73602396e+00, 1.00000000e+00, -1.75191261e+00, 8.75313200e-01)
-
 # instantiate keyboard controller
 keyboard = Controller()
 
@@ -94,15 +85,7 @@ def callBack(data):
     output = filterDC.dofilter(data) 
     output = filterLP.dofilter(output)
     
-    # intermediate = filterDC.dofilter(data)
-    # intermediate = filterDC2.dofilter(intermediate)
-    # output = filterDC3.dofilter(intermediate)
-    
-    # intermediate  = filterLP.dofilter(output)           # comment these 3 out for DC filter only
-    # intermediate  = filterLP2.dofilter(intermediate)    # comment these 3 out for DC filter only
-    # output        = filterLP3.dofilter(intermediate)    # comment these 3 out for DC filter only
-    
-    # jump
+    # send jump key operation to control the game
     if output >= 0.04:
         keyboard.press(Key.space)
         keyboard.release(Key.space)
