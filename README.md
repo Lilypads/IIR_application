@@ -1,4 +1,4 @@
-![Alt text](https://github.com/Lilypads/IIR_application/blob/master/circuit_diagram.png)
+![Alt text](https://github.com/Lilypads/IIR_application/blob/main/circuit_diagram.png)
 ![Alt text](https://github.com/Lilypads/IIR_application/blob/master/game_preview.png)
 
 # IIR_application
