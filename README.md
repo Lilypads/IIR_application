@@ -4,6 +4,8 @@
 # IIR_application
 Using accelerometer sensor and Arduino to control a game.
 
+Have a look at our video explaining what we did and filtering results: https://youtu.be/T_xc3NxIb94
+
 ## Prerequisite
 1. Python
 
